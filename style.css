@@ -5,6 +5,11 @@
   --light-teal: #CEDFD9;
   --off-white: #EBFCFB;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 /* base */
 * {
   box-sizing: border-box;

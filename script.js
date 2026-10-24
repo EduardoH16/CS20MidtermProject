@@ -5,27 +5,45 @@
                 runs the hamburger menu andn puts the current year in the footer
 */
 
+// hamburger menu toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector(".menu-toggle");
+  const closeButton = document.querySelector(".menu-close");
+  const panel = document.querySelector(".menu-panel");
+  const overlay = document.querySelector(".menu-overlay");
+
+  if (!toggleButton || !panel || !overlay) return;
+
+  function openMenu() {
+    panel.classList.add("is-open");
+    overlay.classList.add("is-open");
+    document.body.classList.add("menu-open");
+  }
+
+  function closeMenu() {
+    panel.classList.remove("is-open");
+    overlay.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+  }
+
+  toggleButton.addEventListener("click", openMenu);
+  overlay.addEventListener("click", closeMenu);
+  if (closeButton) closeButton.addEventListener("click", closeMenu);
+
+  // closes menu when a tab on the menu is clicked
+  panel.querySelectorAll(".menu-list a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+});
+
 // setUpPage: runs once the page has loaded to the header/footer elements exist
 function setUpPage() {
-    var toggle = document.getElementById("nav-toggle");
-    var nav = document.getElementById("main-nav");
-    // humburger is like a button that opens/closes the nav list on small screens when clicked
-    // TODO: currently is skipped if the page has no header yet, but can be updated after I get header from eddy
-    if (toggle && nav) {
-        toggle.onclick = function() {
-            if (nav.className == "main-nav open") {
-                nav.className = "main-nav";
-                toggle.setAttribute("aria-expanded", false);
-            }
-            else {
-                nav.className = "main-nav open";
-                toggle.setAttribute("aria-expanded", true);
-            }
-        };
-    }
     // keep the copyright year current using the Date object
-    var today = new Date();
-    document.getElementById("year").innerText = today.getFullYear();
+    var year = document.getElementById("year");
+    if (year) {
+        var today = new Date();
+        year.innerText = today.getFullYear();
+    }
 }
 
 // use an event listener so other pages can add their own load handles without overwriting the footer
