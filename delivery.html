@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>delivery</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
         <div class="wrapper">
-            <header>
-                <nav>
-                    <div class="menuButtons">
-                        <a href="index.html">Home</a>
-                        <a href="find-an-influencer.html">Menu</a>
-                        <a href="stories.html">Delivery</a>
-                        <a href="contact.html">Contact Us</a>
-                    </div>
-                </nav>
-            </header>
+            <!-- header -->
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">L’ éléphante</a></h1>
+    <button class="menu-toggle" type="button">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+  </header>
+
+  <div class="menu-overlay"></div>
+
+  <!-- hamburger menu -->
+  <nav class="menu-panel" id="menu-panel">
+    <div class="menu-panel__top">
+      <button class="menu-close" type="button">&times;</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="teammembers.html">Team Members</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
             <h2 id="titleCard">Delivery</h2>
 
             <form action="#">
