@@ -13,6 +13,8 @@
         <title>Menu | l’éléphante bakery</title>
         <!-- shared external style sheet -->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="header.css">
+        <script src="script.js" defer></script>
         <!-- internal style sheet -->
         <style>
             .menu-section {
@@ -67,7 +69,34 @@
         </style>
     </head>
     <body>
-        <!-- TODO: add header here after eddy builds it -->
+        <!-- header -->
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">L’ éléphante</a></h1>
+    <button class="menu-toggle" type="button">
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+      <span class="menu-toggle__bar"></span>
+    </button>
+  </header>
+
+  <div class="menu-overlay"></div>
+
+  <!-- hamburger menu -->
+  <nav class="menu-panel" id="menu-panel">
+    <div class="menu-panel__top">
+      <button class="menu-close" type="button">&times;</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="teammembers.html">Team Members</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+        
         <main>
             <h1>Menu</h1>
             <p class="intro">Everything is made in small batches starting at 4 am, so favorites can sell out by early afternoon. Seasonal donuts change about every six weeks.</p>
