@@ -1,3 +1,10 @@
+/* 
+    Author: Natalie Arai
+    CS20 Midterm Project: l'elephante bakery
+    script.js - a shared javascript file that is linked on every page as a fixed page element;
+                runs the hamburger menu andn puts the current year in the footer
+*/
+
 // hamburger menu toggle
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector(".menu-toggle");
@@ -28,3 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", closeMenu);
   });
 });
+
+// setUpPage: runs once the page has loaded to the header/footer elements exist
+function setUpPage() {
+    // keep the copyright year current using the Date object
+    var year = document.getElementById("year");
+    if (year) {
+        var today = new Date();
+        year.innerText = today.getFullYear();
+    }
+}
+
+// use an event listener so other pages can add their own load handles without overwriting the footer
+window.addEventListener("load", setUpPage);

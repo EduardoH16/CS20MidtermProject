@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Apple Cider Donut",
+        "price": "3.75",
+        "description": "Cake done made with reduced local cider, tossed in cinnamon sugar",
+        "image": "images/menu/apple-cider.jpg",
+        "category": "Fall Seasonal",
+        "seasonal": true
+    },
+    {
+        "name": "Maple Pecan",
+        "price": "4.25",
+        "description": "Raised donut with a Vermont maple glaze and toasted pecans.",
+        "image": "images/menu/maple-pecan.jpg",
+        "category": "Fall Seasonal",
+        "seasonal": true
+    },
+    {
+        "name": "Pumpkin Spice Cake",
+        "price": "3.75",
+        "description": "Pumpkin cake donut with a brown butter glaze and a pinch of nutmeg.",
+        "image": "images/menu/pumpkin-spice.jpg",
+        "category": "Fall Seasonal",
+        "seasonal": true
+    },
+    {
+        "name": "Classic Glazed",
+        "price": "2.75",
+        "description": "Our light, yeasted brioche donut with a thin vanilla-bean glaze.",
+        "image": "images/menu/classic-glazed.jpg",
+        "category": "Classic Donuts",
+        "seasonal": false
+    },
+    {
+        "name": "Chocolate Frosted",
+        "price": "3.25",
+        "description": "Brioche donut dipped in dark chocolate ganache.",
+        "image": "images/menu/chocolate-frosted.jpg",
+        "category": "Classic Donuts",
+        "seasonal": false
+    },
+    {
+        "name": "Old-Fashioned Sour Cream",
+        "price": "3.00",
+        "description": "Crisp, cracked edges and a tender crumb, finished with a simple glaze.",
+        "image": "images/menu/old-fashioned.jpg",
+        "category": "Classic Donuts",
+        "seasonal": false
+    },
+    {
+        "name": "Raspberry Jam",
+        "price": "3.75",
+        "description": "Sugar-rolled brioche filled with house-made raspberry jam.",
+        "image": "images/menu/raspberry-jam.jpg",
+        "category": "Filled Donuts",
+        "seasonal": false
+    },
+    {
+        "name": "Vanilla Custard",
+        "price": "4.00",
+        "description": "Filled with vanilla bean pastry cream and topped with chocolate glaze.",
+        "image": "images/menu/vanilla-custard.jpg",
+        "category": "Filled Donuts",
+        "seasonal": false
+    },
+    {
+        "name": "Lemon Curd",
+        "price": "4.00",
+        "description": "Bright lemon curd inside, powdered sugar outside.",
+        "image": "images/menu/lemon-curd.jpg",
+        "category": "Filled Donuts",
+        "seasonal": false
+    },
+    {
+        "name": "Drip Coffee",
+        "price": "2.50",
+        "description": "Medium roast from a small New England roaster. Free refills in the shop.",
+        "image": "images/menu/drip-coffee.jpg",
+        "category": "Coffee and Drinks",
+        "seasonal": false
+    },
+    {
+        "name": "Hot Mulled Cider",
+        "price": "3.50",
+        "description": "Local cider warmed with cinnamon, clove, and orange peel.",
+        "image": "images/menu/mulled-cider.jpg",
+        "category": "Coffee and Drinks",
+        "seasonal": true
+    }
+]

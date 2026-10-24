@@ -1,0 +1,109 @@
+<!--
+    Author: Natalie Arai
+    CS20 Midterm Project: l'elephante bakery
+    menu.html - builds the full menu from data/menu.json by menu.js
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="The full l’éléphante menu: fall seasonal donuts, classic glazed and frosted donuts, filled donuts, coffee and cider.">
+        <meta name="keywords" content="donut menu, donut prices, apple cider donuts, filled donuts, Medford bakery, l’éléphante">
+        <title>Menu | l’éléphante bakery</title>
+        <!-- shared external style sheet -->
+        <link rel="stylesheet" href="style.css">
+        <!-- internal style sheet -->
+        <style>
+            .menu-section {
+                margin-bottom: 30px;
+            }
+            .menu-section h2 {
+                text-align: center;
+                border-bottom: 1px solid #b09398;
+                padding-bottom: 8px;
+            }
+            /* multiple columns with a flex box */
+            .menu-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            /* temporary card styles to match the placeholder card.js (TODO: make sure they match Ishaan's implementation) */
+            .menu-card {
+                flex-basis: 30%;
+                margin: 1.5%;
+                padding: 15px;
+                background-color: #ffffff;
+                border-top: 4px solid #cedfd9;
+                text-align: center;
+            }
+            .menu-card h3 {
+                margin: 10px 0 4px;
+            }
+            .menu-card .price {
+                font-weight: bold;
+                color: #9b6a6c;
+                margin: 0 0 8px;
+            }
+            .order-cta {
+                text-align:center;
+                background-color: #cedfd9;
+                padding: 25px 20px;
+                margin-top: 20px;
+            }
+            @media (max-width: 900px) {
+                .menu-card {
+                    flex-basis: 45%;
+                }
+            }
+        
+            @media (max-width: 600px) {
+                .menu-card {
+                    flex-basis: 100%;
+                    margin: 10px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- TODO: add header here after eddy builds it -->
+        <main>
+            <h1>Menu</h1>
+            <p class="intro">Everything is made in small batches starting at 4 am, so favorites can sell out by early afternoon. Seasonal donuts change about every six weeks.</p>
+            <!-- menu.js fills this div with one section per category -->
+            <div id="menu-list">
+                <p class="center">Loading today's menu...</p>
+            </div>
+            <section class="order-cta">
+                <h2>Can't make it to the shop?</h2>
+                <p>We deliver within 5 miles, Tuesday through Sunday mornings.</p>
+                <a hred="delivery.html" class="button">Order for delivery</a>
+            </section>
+        </main>
+        <!-- footer (same on every page) -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">l’éléphante</a>
+                    <p>Small-batch donuts, fried fresh every morning.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <p>145 Main Street<br>Medford, MA 02155</p>
+                    <p>Tue - Fri: 7 am - 2 pm<br>Sat - Sun: 8 am - 3 pm<br>Closed Mondays</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Get in touch</h2>
+                    <p>(123) 456-7890<br><a href="mailto:hello@lelephante.com">hello@lelephante.com</a></p>
+                    <p><a href="delivery.html">Order delivery</a> | <a href="faq.html">FAQs</a> | <a href="contact.html">Contact us</a></p>
+                </div>
+            </div>
+            <p class="copyright">&copy; <span id="year">2026</span> l’éléphante bakery </p>
+        </footer>
+        <!-- card.js must load before menu.js -->
+        <script src="js/script.js"></script>
+        <script src="js/card.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>

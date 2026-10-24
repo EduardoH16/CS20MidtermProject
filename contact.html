@@ -1,0 +1,123 @@
+<!--
+    Author: Natalie Arai
+    CS20 Midterm Project: l'elephante bakery
+    contact.html - location, hours built by contact.js, and way to reach us
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Find l’éléphante bakery in Medford, MA. Hours, address, phone, email, and catering requests.">
+        <meta name="keywords" content="l’éléphante contact, bakery hours, Medford donut shop, donut catering, bakery address">
+        <title>Contact Us | l’éléphante bakery</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- internal stylesheet for layout used only on the contact page -->
+        <style>
+            /* two columns on wide screens, stacked on phones */
+            .contact-columns {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .contact-box {
+                flex-basis: 48%;
+                background-color: #ffffff;
+                padding: 20px 25px;
+                margin-bottom: 25px;
+                border-top: 4px solid #9b6a6c;
+            }
+            .contact-box h2 {
+                margin-top: 0;
+            }
+            .open-status {
+                font-weight: bold;
+                padding: 8px 12px;
+                background-color: #cedfd9;
+            }
+            .hours {
+                width: 100%;
+            }
+            .hours td {
+                padding: 8px 4px;
+                border-bottom: 1px solid #cedfd9;
+            }
+            .hours tr:last-child td {
+                border-bottom: none;
+            }
+            /* contact.js gives today's row this class */
+            .hours tr.today td {
+                font-weight: bold;
+                color: #9b6a6c;
+            }
+            .contact-list li {
+                margin-bottom: 10px;
+            }
+            @media (max-width: 700px) {
+                .contact-box {
+                    flex-basis: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- TODO: add header here after eddy builds it -->
+        <main>
+            <h1>Contact us</h1>
+            <p class="intro">Questions about an order, a big event, or what’s in the case today? Call, email, or stop by.</p>
+        
+            <div class="contact-columns">
+            <section class="contact-box">
+                <h2>Visit the shop</h2>
+                <p>145 Main Street<br>Medford, MA 02155</p>
+                <p>Street parking on Main Street, and a bike rack out front. We’re a 5-minute walk from Medford Square.</p>
+        
+                <h2>Call or email</h2>
+                <p>Phone: (617) 555-0142<br>Email: <a href="mailto:hello@lelephante.com">hello@lelephante.com</a></p>
+                <p>We answer email within one business day.</p>
+            </section>
+        
+            <section class="contact-box">
+                <h2>Hours</h2>
+                <!-- contact.js writes the open/closed message and the hours table here -->
+                <p class="open-status" id="open-status">Tue – Fri: 7 am – 2 pm, Sat – Sun: 8 am – 3 pm, closed Mondays.</p>
+                <div id="hours-table"></div>
+            </section>
+            </div>
+        
+            <section>
+            <h2>Before you reach out</h2>
+            <ul class="contact-list">
+                <li><strong>Allergy or ingredient questions:</strong> most answers are on our <a href="faq.html">FAQ page</a>.</li>
+                <li><strong>Delivery orders:</strong> place them on the <a href="delivery.html">delivery page</a> by 9 pm the night before.</li>
+                <li><strong>Catering and parties (3 dozen or more):</strong> email us at least 48 hours ahead with the date, count, and flavors.</li>
+                <li><strong>Gift cards:</strong> available at the register in any amount.</li>
+            </ul>
+            </section>
+        </main>
+    
+        <!-- footer (same on every page) -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">l’éléphante</a>
+                    <p>Small-batch donuts, fried fresh every morning.</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Visit</h2>
+                    <p>145 Main Street<br>Medford, MA 02155</p>
+                    <p>Tue - Fri: 7 am - 2 pm<br>Sat - Sun: 8 am - 3 pm<br>Closed Mondays</p>
+                </div>
+                <div class="footer-col">
+                    <h2>Get in touch</h2>
+                    <p>(123) 456-7890<br><a href="mailto:hello@lelephante.com">hello@lelephante.com</a></p>
+                    <p><a href="delivery.html">Order delivery</a> | <a href="faq.html">FAQs</a> | <a href="contact.html">Contact us</a></p>
+                </div>
+            </div>
+            <p class="copyright">&copy; <span id="year">2026</span> l’éléphante bakery </p>
+        </footer>
+        <script src="js/script.js"></script>
+        <script src="js/contact.js"></script>
+    </body>
+</html>
