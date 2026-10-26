@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FAQs</title>
+  <title>Reviews</title>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="header.css">
@@ -14,13 +14,13 @@
       background-color: #ffffff;
     }
 
-    .faq-page {
+    .reviews-page {
       max-width: 800px;
       margin: 0 auto;
       padding: clamp(24px, 5vw, 56px) clamp(16px, 5vw, 48px) 64px;
     }
 
-    .faq-page h1 {
+    .reviews-page h1 {
       margin: 0 0 clamp(24px, 4vw, 40px);
       font-size: clamp(2rem, 6vw, 3rem);
       font-weight: 700;
@@ -28,23 +28,32 @@
       color: var(--stone-brown);
     }
 
-    .faq-list {
+    .review-list {
+      list-style: none;
       margin: 0;
-      padding-left: 20px;
+      padding: 0;
     }
 
-    .faq-list li {
-      margin-bottom: 28px;
+    .review-list li {
+      margin-bottom: 24px;
+      padding: 20px;
+      border-left: 4px solid var(--smoky-rose);
     }
 
-    .faq-list h2 {
-      margin: 0 0 6px;
+    .review-list h2 {
+      margin: 0 0 4px;
       font-size: clamp(1.25rem, 3.5vw, 1.6rem);
       font-weight: 700;
       color: var(--stone-brown);
     }
 
-    .faq-list p {
+    .stars {
+      margin: 0 0 8px;
+      color: var(--smoky-rose);
+      font-size: 1.2rem;
+    }
+
+    .review-list p {
       margin: 0;
       font-size: clamp(1rem, 2.5vw, 1.15rem);
       line-height: 1.5;
@@ -81,29 +90,34 @@
     </ul>
   </nav>
 
-  <main class="faq-page">
-    <h1>FAQs</h1>
+  <main class="reviews-page">
+    <h1>Reviews</h1>
 
-    <ul class="faq-list">
+    <ul class="review-list">
       <li>
-        <h2>What are your hours?</h2>
-        <p>We're open Tuesday through Sunday from 8am to 6pm. We're closed on Mondays.</p>
+        <h2>Ava S.</h2>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>Best donuts in Medford, hands down. The maple glazed was still warm when I got it. I've been back three times this month.</p>
       </li>
       <li>
-        <h2>Do I need a reservation?</h2>
-        <p>No, walk-ins are always welcome. For groups of 6 or more, we recommend calling ahead.</p>
+        <h2>Manuel P.</h2>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>Got a dozen for my office and they were gone in ten minutes. The raspberry filled ones were everyone's favorite.</p>
       </li>
       <li>
-        <h2>Do you have vegetarian or vegan options?</h2>
-        <p>Yes! Several items on our menu are vegetarian, and we have a few vegan options too. Just ask a staff member.</p>
+        <h2>Priyanka O.</h2>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        <p>Really good donuts and super friendly staff. The line on Saturday morning was long, so get there early if you can.</p>
       </li>
       <li>
-        <h2>Is there parking nearby?</h2>
-        <p>There is street parking on our block and a public lot about two minutes away.</p>
+        <h2>Logan Y.</h2>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>The cinnamon sugar donut is perfect. Light, fluffy, not too sweet. Great coffee too.</p>
       </li>
       <li>
-        <h2>Can I book L’ éléphante for a private event?</h2>
-        <p>Yes. Send us a message through the Contact page with your date and group size, and we'll get back to you.</p>
+        <h2>Tomas M.</h2>
+        <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+        <p>Ordered delivery for a birthday and everything showed up fresh and on time. Wish they were open on Mondays!</p>
       </li>
     </ul>
   </main>
