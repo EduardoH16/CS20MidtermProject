@@ -25,42 +25,67 @@
                 border-bottom: 1px solid #b09398;
                 padding-bottom: 8px;
             }
-            /* multiple columns with a flex box */
-            .menu-grid {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            /* temporary card styles to match the placeholder card.js (TODO: make sure they match Ishaan's implementation) */
-            .menu-card {
-                flex-basis: 30%;
-                margin: 1.5%;
-                padding: 15px;
-                background-color: #ffffff;
-                border-top: 4px solid #cedfd9;
-                text-align: center;
-            }
-            .menu-card h3 {
-                margin: 10px 0 4px;
-            }
-            .menu-card .price {
-                font-weight: bold;
-                color: #9b6a6c;
-                margin: 0 0 8px;
-            }
             .order-cta {
                 text-align:center;
                 background-color: #cedfd9;
                 padding: 25px 20px;
                 margin-top: 20px;
             }
+            .order-cta h2 {
+                margin-top: 0;
+            }
+            /* menu cards built by card.js */
+            .card-grid {
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .menu-card {
+                flex-basis: 30%;
+                margin: 1.5%;
+                background-color: #ffffff;
+                border: 1px solid #cedfd9;
+            }
+            /* the mint background shows if a photo is missing */
+            .menu-card img {
+                display: block;
+                width: 100%;
+                min-height: 160px;
+                background-color: #cedfd9;
+            }
+            .menu-card-body {
+                padding: 15px 18px 20px;
+            }
+            /* name on the left, price on the right */
+            .menu-card-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            .menu-card h3 {
+                font-size: 1.15em;
+            }
+            .menu-card .price {
+                margin-left: 12px;
+                font-weight: bold;
+                color: #9b6a6c;
+            }
+            .menu-card p {
+                margin: 8px 0 0;
+            }
+            .seasonal-tag {
+                display: inline-block;
+                margin-bottom: 8px;
+                padding: 2px 10px;
+                font-size: 0.8em;
+                background-color: #cedfd9;
+            }
             @media (max-width: 900px) {
                 .menu-card {
                     flex-basis: 45%;
                 }
             }
-        
-            @media (max-width: 600px) {
+            @media (max-width: 700px) {
                 .menu-card {
                     flex-basis: 100%;
                     margin: 10px 0;
@@ -97,7 +122,7 @@
     </ul>
   </nav>
         
-        <main>
+        <main class ="page-main">
             <h1>Menu</h1>
             <p class="intro">Everything is made in small batches starting at 4 am, so favorites can sell out by early afternoon. Seasonal donuts change about every six weeks.</p>
             <!-- menu.js fills this div with one section per category -->
@@ -107,7 +132,7 @@
             <section class="order-cta">
                 <h2>Can't make it to the shop?</h2>
                 <p>We deliver within 5 miles, Tuesday through Sunday mornings.</p>
-                <a hred="delivery.html" class="button">Order for delivery</a>
+                <a href="delivery.html" class="button">Order for delivery</a>
             </section>
         </main>
         <!-- footer (same on every page) -->
@@ -131,7 +156,7 @@
             <p class="copyright">&copy; <span id="year">2026</span> l’éléphante bakery </p>
         </footer>
         <!-- card.js must load before menu.js -->
-        <script src="js/card.js"></script>
-        <script src="js/menu.js"></script>
+        <script src="card.js"></script>
+        <script src="menu.js"></script>
     </body>
 </html>

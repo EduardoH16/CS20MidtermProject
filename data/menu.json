@@ -2,7 +2,7 @@
     {
         "name": "Apple Cider Donut",
         "price": "3.75",
-        "description": "Cake done made with reduced local cider, tossed in cinnamon sugar",
+        "description": "Cake donut made with reduced local cider, tossed in cinnamon sugar",
         "image": "images/menu/apple-cider.jpg",
         "category": "Fall Seasonal",
         "seasonal": true

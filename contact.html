@@ -8,7 +8,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Find l’éléphante bakery in Medford, MA. Hours, address, phone, email, and catering requests.">
+        <meta name="description" content="Find l’éléphante bakery in Medford, MA. Hours, address, phone, email, and a form for questions and catering requests.">
         <meta name="keywords" content="l’éléphante contact, bakery hours, Medford donut shop, donut catering, bakery address">
         <title>Contact Us | l’éléphante bakery</title>
         <link rel="stylesheet" href="style.css">
@@ -17,48 +17,161 @@
         
         <!-- internal stylesheet for layout used only on the contact page -->
         <style>
+            /* main is not narrowed on this page */
+            .contact-main, .contact-main * {
+                box-sizing: border-box;
+            }
+            .contact-main {
+                display:block;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #5f5449;
+                max-width: none;
+                padding: 0;
+            }
+            .contact-main h1, .contact-main h2, .contact-main h3 {
+                line-height: 1.2;
+            }
+            .contact-main a {
+                color: #9b6a6c;
+            }
+            .contact-hero {
+                background-color: #5f5449;
+                color: #ebfcfb;
+                text-align: center;
+                padding: 45px 20px 50px;
+                border-bottom: 12px solid #cedfd9;
+            }
+            .contact-hero h1 {
+                margin: 0 0 12px;
+                font-size: 2.4em;
+                color: #ebfcfb;
+            }
+            .contact-hero p {
+                max-width: 620px;
+                margin: 0 auto;
+                font-size: 1.15em;
+            }
             /* two columns on wide screens, stacked on phones */
             .contact-columns {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                align-items: flex-start;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 45px 20px 50px;
             }
-            .contact-box {
-                flex-basis: 48%;
-                background-color: #ffffff;
-                padding: 20px 25px;
-                margin-bottom: 25px;
-                border-top: 4px solid #9b6a6c;
+            .visit-us {
+                flex-basis: 36%;
             }
-            .contact-box h2 {
+ 
+            .message-box {
+                flex-basis: 58%;
+                background-color: #cedfd9;
+                padding: 30px 35px 35px;
+            }
+            .message-box form {
+                width: 100%;
+                margin: 0;
+            }
+ 
+            .visit-us h2,
+            .message-box h2 {
                 margin-top: 0;
+                font-size: 1.8em;
             }
+ 
+            /* small labels above each piece of contact info */
+            .visit-us h3 {
+                margin: 22px 0 4px;
+                font-size: 1.05em;
+                color: #9b6a6c;
+            }
+            .visit-us p {
+                margin: 0;
+            }
+ 
             .open-status {
-                font-weight: bold;
+                margin: 4px 0 10px;
                 padding: 8px 12px;
+                font-weight: bold;
                 background-color: #cedfd9;
             }
+ 
             .hours {
                 width: 100%;
             }
+ 
             .hours td {
-                padding: 8px 4px;
+                padding: 6px 4px;
                 border-bottom: 1px solid #cedfd9;
             }
+ 
             .hours tr:last-child td {
                 border-bottom: none;
             }
+ 
             /* contact.js gives today's row this class */
             .hours tr.today td {
                 font-weight: bold;
                 color: #9b6a6c;
             }
-            .contact-list li {
-                margin-bottom: 10px;
+ 
+            /* form: each label sits above its field, all fields the same width */
+            .message-box label {
+                display: block;
+                margin: 16px 0 6px;
+                font-weight: bold;
             }
-            @media (max-width: 700px) {
-                .contact-box {
+ 
+            .message-box input,
+            .message-box select,
+            .message-box textarea {
+                display: block;
+                width: 100%;
+                padding: 10px 12px;
+                font-family: inherit;
+                font-size: 1em;
+                color: #5f5449;
+                background-color: #ffffff;
+                border: 1px solid #b09398;
+            }
+ 
+            .message-box input[type="submit"] {
+                width: auto;
+                margin-top: 24px;
+                border: none;
+                background-color: #9b6a6c;
+                color: #ffffff;
+            }
+ 
+            .message-box input[type="submit"]:hover {
+                background-color: #5f5449;
+            }
+ 
+            /* contact.js adds this class to a field that needs fixing */
+            .message-box .has-error {
+                border: 2px solid #a12a2a;
+            }
+ 
+            .field-error {
+                display: block;
+                margin-top: 4px;
+                font-size: 0.9em;
+                color: #a12a2a;
+            }
+ 
+            @media (max-width: 800px) {
+                .visit-us,
+                .message-box {
                     flex-basis: 100%;
+                }
+ 
+                .message-box {
+                    margin-top: 35px;
+                    padding: 25px 20px 30px;
                 }
             }
         </style>
@@ -91,38 +204,64 @@
     </ul>
   </nav>
         
-        <main>
-            <h1>Contact us</h1>
-            <p class="intro">Questions about an order, a big event, or what’s in the case today? Call, email, or stop by.</p>
+        <main class="contact-main">
+            <section class="contact-hero">
+                <h1>Contact us</h1>
+                <p class="intro">Questions about an order, a big event, or what’s in the case today? Call, email, or stop by.</p>
+            </section>
         
             <div class="contact-columns">
-            <section class="contact-box">
-                <h2>Visit the shop</h2>
-                <p>145 Main Street<br>Medford, MA 02155</p>
-                <p>Street parking on Main Street, and a bike rack out front. We’re a 5-minute walk from Medford Square.</p>
-        
-                <h2>Call or email</h2>
-                <p>Phone: (617) 555-0142<br>Email: <a href="mailto:hello@lelephante.com">hello@lelephante.com</a></p>
-                <p>We answer email within one business day.</p>
-            </section>
-        
-            <section class="contact-box">
-                <h2>Hours</h2>
-                <!-- contact.js writes the open/closed message and the hours table here -->
-                <p class="open-status" id="open-status">Tue – Fri: 7 am – 2 pm, Sat – Sun: 8 am – 3 pm, closed Mondays.</p>
-                <div id="hours-table"></div>
-            </section>
+                <section class="visit-us">
+                    <h2>Visit the shop</h2>
+                    <h3>Address</h3>
+                    <p>145 Main Street<br>Medford, MA 02155</p>
+            
+                    <h3>Phone</h3>
+                    <p>(123) 456-7890</p>
+
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@lelephante.com">hello@lelephante.com</a></p>
+
+                    <h3>Hours</h3>
+                    <!-- contact.js replaces this message and fills in the hours table-->
+                    <p class="open-status" id="open-status">Tue – Fri: 7 am – 2 pm, Sat – Sun: 8 am – 3 pm, closed Mondays.</p>
+                    <div id="hours-table"></div>
+                </section>
+                <section class="message-box">
+                    <h2>Send us a message</h2>
+                    <!-- contact.js does the validation -->
+                    <form id="contact-form" name="contactForm" novalidate>
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="contactName">
+                        <span class="field-error" id="contact-name-error"></span>
+ 
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="contactEmail">
+                        <span class="field-error" id="contact-email-error"></span>
+ 
+                        <label for="contact-phone">Phone (optional)</label>
+                        <input type="tel" id="contact-phone" name="contactPhone">
+                        <span class="field-error" id="contact-phone-error"></span>
+ 
+                        <label for="contact-topic">I’m interested in</label>
+                        <select id="contact-topic" name="contactTopic">
+                            <option value="">Choose one</option>
+                            <option value="order">A question about an order</option>
+                            <option value="catering">Catering or a party (3 dozen or more)</option>
+                            <option value="allergies">Allergies and ingredients</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Something else</option>
+                        </select>
+                        <span class="field-error" id="contact-topic-error"></span>
+ 
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="contactMessage" rows="6"></textarea>
+                        <span class="field-error" id="contact-message-error"></span>
+ 
+                        <input type="submit" value="Send message" class="button">
+                    </form>
+                </section>
             </div>
-        
-            <section>
-            <h2>Before you reach out</h2>
-            <ul class="contact-list">
-                <li><strong>Allergy or ingredient questions:</strong> most answers are on our <a href="faq.html">FAQ page</a>.</li>
-                <li><strong>Delivery orders:</strong> place them on the <a href="delivery.html">delivery page</a> by 9 pm the night before.</li>
-                <li><strong>Catering and parties (3 dozen or more):</strong> email us at least 48 hours ahead with the date, count, and flavors.</li>
-                <li><strong>Gift cards:</strong> available at the register in any amount.</li>
-            </ul>
-            </section>
         </main>
     
         <!-- footer (same on every page) -->
@@ -145,6 +284,7 @@
             </div>
             <p class="copyright">&copy; <span id="year">2026</span> l’éléphante bakery </p>
         </footer>
-        <script src="js/contact.js"></script>
+        <!-- script.js is loaded in the head -->
+        <script src="contact.js"></script>
     </body>
 </html>
