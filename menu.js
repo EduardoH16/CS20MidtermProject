@@ -21,7 +21,7 @@ function getPrice() {
 }
 
 // loadMenu: reads the external JSON and call buildMenu with the items
-function loadMenu() {
+function loadMenuItems(callback, boxId) {
     fetch("data/menu.json")
         .then(res => res.text())
         .then(data => {
@@ -72,7 +72,7 @@ function buildSeasonal(menuItems) {
     var html = "";
     for (var i = 0; i < seasonalItems.length && i < 3; i ++)
         html += createCard(seasonalItems[i]);
-    document.getElementById("seasonal-list").innterHTML = html;
+    document.getElementById("seasonal-list").innerHTML = html;
 }
 
 // startMenu: runs the right builder depending on which box is on the current page
