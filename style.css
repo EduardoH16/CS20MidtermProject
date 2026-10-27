@@ -1,9 +1,9 @@
 :root {
   --stone-brown: #5F5449;
   --smoky-rose: #9B6A6C;
-  --lighter-rose: #B09398;
-  --light-teal: #CEDFD9;
-  --off-white: #EBFCFB;
+  --lighter-rose: #FFC5D3;
+  --light-teal: #f7f2ee;
+  --off-white: #FFFFFF;
 }
 
 /* base */
@@ -20,7 +20,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   color: #5f5449;
-  background-color: #ebfcfb;
+  background-color: #FFFFFF;
 }
 
 h1, h2, h3 {
@@ -80,7 +80,7 @@ main {
 }
 
 .logo:hover {
-  color: #cedfd9;
+  color: #f7f2ee;
 }
 
 .wrapper {
@@ -106,7 +106,7 @@ nav:not(.menu-panel) {
 
 nav:not(.menu-panel) a {
   text-decoration: none;
-  color: var(--off-white);
+  color: #ffffff;
   font-size: 19px;
   margin-right: 10px;
   padding-left: 20px;
@@ -125,7 +125,7 @@ nav:not(.menu-panel) a:hover {
 
 .hero {
   background-color: var(--stone-brown);
-  background-image: url("https://images.unsplash.com/photo-1597528662465-55ece5734101?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
+  background-image: url("images/home-hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,17 +160,17 @@ nav:not(.menu-panel) a:hover {
 
 .section h2 {
   padding-top: 15px;
-  color: var(--off-white);
+  color: #5F5449;
   font-family: Poppins;
   font-size: 45px;
 }
 
 .section p {
   color: var(--stone-brown);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 30px;
-  margin-left: 25%;
-  margin-right: 25%;
+  font-family: Poppins;
+  font-size: 20px;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
 .section2 {
@@ -199,6 +199,50 @@ nav:not(.menu-panel) a:hover {
   min-height: 500px;
 }
 
+.product {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  padding: 0;
+  position: relative;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  color: #F0F7EE;
+}
+
+.product img {
+  max-width: 80%;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.overlay {
+  z-index: 2;
+  background-color: hsla(0, 20%, 6%, 0.621);
+  width: 400px;
+  height: 400px;
+  display: none;
+  position: absolute;
+  border-radius: 6px;
+}
+
+.overlay a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.product:hover .overlay {
+  display: block;
+}
+
 /* Section 3 */
 
 .section3 {
@@ -208,7 +252,7 @@ nav:not(.menu-panel) a:hover {
   width: 100%;
   text-align: center;
   margin-bottom: auto;
-  background-image: url("https://images.unsplash.com/photo-1523294587484-bae6cc870010?q=80&w=2004&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
+  background-image: url("images/home-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -225,24 +269,27 @@ nav:not(.menu-panel) a:hover {
 }
 
 .More {
-  background-color: var(--smoky-rose);
+  background-color: var(--lighter-rose);
   width: fit-content;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 0;
   border-radius: 13px;
-  font-family: "Poppins", sans-serif;
   font-size: 25px;
   font-weight: 400;
   font-style: normal;
-  color: white;
+  color: var(--stone-brown);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.374);
   text-decoration: none;
   text-align: center;
   justify-self: center;
   margin-top: 20px;
+}
+.More:hover {
+  background-color: var(--smoky-rose);
+  color: #ffffff;
 }
 
 /* shared button */
@@ -271,7 +318,7 @@ nav:not(.menu-panel) a:hover {
 /* footer (fixed page element) */
 .site-footer {
   background-color: #5f5449;
-  color: #ebfcfb;
+  color: #FFFFFF;
   padding: 30px 20px 15px;
 }
 
@@ -293,7 +340,7 @@ nav:not(.menu-panel) a:hover {
 }
 
 .site-footer h2 {
-  color: #cedfd9;
+  color: #f7f2ee;
   font-size: 1.1em;
   margin: 0 0 8px;
 }
@@ -303,18 +350,18 @@ nav:not(.menu-panel) a:hover {
 }
 
 .site-footer a {
-  color: #ebfcfb;
+  color: #FFFFFF;
 }
 
 .site-footer a:hover {
-  color: #cedfd9;
+  color: #ab9d91;
 }
 
 .copyright {
   max-width: 1100px;
   margin: 0 auto;
   padding-top: 12px;
-  border-top: 1px solid #b09398;
+  border-top: 1px solid #FFC5D3;
   text-align: center;
   font-size: 0.85em;
 }
@@ -418,6 +465,29 @@ footer:not(.site-footer) {
     margin-right: 10%;
   }
 
+  /* Products */
+  .product {
+    width: 100%;
+  }
+
+  .product img {
+    width: 250px;
+    max-width: 80%;
+    height: auto;
+  }
+
+  /* Overlay */
+  .overlay {
+    width: 250px;
+    height: 250px;
+    top: 0;
+    left: 0;
+  }
+
+  .overlay a {
+    font-size: 30px;
+  }
+
   /* More button */
   .More {
     font-size: 20px;
@@ -463,4 +533,23 @@ footer:not(.site-footer) {
   .footer-col {
     flex-basis: 100%;
   }
+}
+
+/* consistent fonts on every page */
+/* bakery name: the same script font as the header */
+.logo,
+.hero h1 {
+  font-family: "Great Vibes", "Brush Script MT", "Segoe Script", cursive;
+  font-weight: 400;
+}
+
+/* everything else: Times New Roman, like the rest of the site */
+.hero h2,
+.section h2,
+.section2 h2,
+.section3 h2,
+.product,
+.More,
+#titleCard {
+  font-family: "Times New Roman", Times, serif;
 }

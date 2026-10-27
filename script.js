@@ -30,9 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
   overlay.addEventListener("click", closeMenu);
   if (closeButton) closeButton.addEventListener("click", closeMenu);
 
-  // closes menu when a tab on the menu is clicked
+  // the file name of the page that's open (the site's main address counts as index.html)
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
   panel.querySelectorAll(".menu-list a").forEach((link) => {
+    // closes menu when a tab on the menu is clicked
     link.addEventListener("click", closeMenu);
+
+    // highlights the link for the page you're on
+    if (link.getAttribute("href") === currentPage)
+      link.classList.add("is-current");
   });
 });
 
