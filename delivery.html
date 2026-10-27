@@ -38,6 +38,14 @@
     </ul>
   </nav>
             <h2 id="titleCard">Delivery</h2>
+            <h2>Freshly Baked, Delivered to Your Door</h2>
+            <p id="delDesc">Enjoy the delicious taste of freshly baked goodness without 
+                leaving the comfort of your home! From our classic donuts to indulgent cakes,
+                 cookies, and sweet treats, we deliver your bakery favorites straight to your doorstep.
+                 Every order is carefully prepared with love, using quality ingredients to
+                  bring freshness, flavor, and happiness to your day. Whether you're planning a
+                   special celebration, treating yourself, or sharing something sweet with loved ones,
+                    we're here to make every moment extra special.</p>
 
             <form action="#">
                 <label for="name">Name:</label>
@@ -80,8 +88,8 @@
         <footer class="site-footer">
             <div class="footer-inner">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="font-family: 'Great Vibes', 'Brush Script MT', 'Segoe Script', cursive;">L’éléphante</a>
-                    <p>A cozy neighborhood bakery in Medford serving handmade donuts and fresh coffee, made from scratch every morning.</p>
+                    <a href="index.html" class="logo">l’éléphante</a>
+                    <p>Small-batch donuts, fried fresh every morning.</p>
                 </div>
                 <div class="footer-col">
                     <h2>Visit</h2>
@@ -98,6 +106,12 @@
         </footer>
 
     <style>
+
+        #delDesc {
+            margin-left: 400px;
+            margin-right: 400px;
+            font-size: 20px;
+        }
                 
         form {
             display: flex;
@@ -105,14 +119,17 @@
             width: 500px;
             margin: 40px auto;
             padding: 30px;
-            background-color: var(--smoky-rose);
-            border-radius: 10px;
+            background-color: var(--light-teal);
+            /* border-radius: 10px; */
+            border-color: lightgray;
+            border: solid;
+            border-width: 1px;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             margin-bottom: 175px;
         }
 
         form label {
-            color: var(--off-white);
+            color: var(--stone-brown);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: 18px;
             margin-bottom: 5px;
@@ -123,24 +140,51 @@
         form textarea {
             margin-bottom: 20px;
             padding: 10px;
-            border: none;
-            border-radius: 5px;
+            /* border: none; */
+            border-color: lightgray;
+            border: solid;
+            border-width: 1px;
+            /* border-radius: 5px; */
             font-size: 16px;
         }
 
         form button {
-            background-color: var(--stone-brown);
+            background-color: var(--smoky-rose);
             color: white;
-            border: none;
-            border-radius: 8px;
+            /* border: none; */
+            /* border-radius: 8px; */
+            border-color: lightgray;
+            border: solid;
+            border-width: 1px;
             padding: 12px;
             font-size: 18px;
             cursor: pointer;
         }
 
         form button:hover {
-            background-color: #6fa58c;
+            background-color: var(--stone-brown);
         }
+         @media (max-width: 1300px) {
+                #delDesc {
+                    margin-left: 100px;
+                    margin-right: 100px;
+                }
+         }
+
+         @media (max-width: 540px) {
+                form {
+                    width: 90%;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    /* margin: 10px 0; */
+                    /* width: 75%; */
+                }
+                #delDesc {
+                    margin-left: 50px;
+                    margin-right: 50px;
+                }
+          }
+
 
     </style>
 

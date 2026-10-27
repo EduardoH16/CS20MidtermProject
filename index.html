@@ -7,6 +7,86 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
     <script src="script.js" defer></script>
+    <!-- internal style sheet -->
+        <style>
+            .menu-section {
+                margin-bottom: 30px;
+            }
+            .menu-section h2 {
+                text-align: center;
+                border-bottom: 1px solid #b09398;
+                padding-bottom: 8px;
+            }
+            .order-cta {
+                text-align:center;
+                background-color: #cedfd9;
+                padding: 25px 20px;
+                margin-top: 20px;
+            }
+            .order-cta h2 {
+                margin-top: 0;
+            }
+            /* menu cards built by card.js */
+            .card-grid {
+                display: flex; 
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .menu-card {
+                flex-basis: 30%;
+                margin: 1.5%;
+                background-color: #ffffff;
+                border: 1px solid #cedfd9;
+            }
+            /* the mint background shows if a photo is missing */
+            .menu-card img {
+                display: block;
+                width: 100%;
+                min-height: 160px;
+                background-color: #cedfd9;
+            }
+            .menu-card-body {
+                padding: 15px 18px 20px;
+            }
+            /* name on the left, price on the right */
+            .menu-card-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            .menu-card h3 {
+                font-size: 1.15em;
+            }
+            .menu-card .price {
+                margin-left: 12px;
+                font-weight: bold;
+                color: #9b6a6c;
+            }
+            .menu-card p {
+                margin: 8px 0 0;
+            }
+            .seasonal-tag {
+                display: inline-block;
+                margin-bottom: 8px;
+                padding: 2px 10px;
+                font-size: 0.8em;
+                background-color: #cedfd9;
+            }
+            @media (max-width: 678px) {
+                .menu-card {
+                    flex-basis: 45%;
+                }
+            }
+            @media (max-width: 700px) {
+                .menu-card {
+                    flex-basis: 45%;
+                    margin: 10px 0;
+                    /* width: 75%; */
+                }
+            }
+
+
+        </style>
 </head>
 <body>
     <div class="wrapper">
@@ -49,30 +129,8 @@
         </div>
         <div class="section2">
             <h2>Seasonal Specials</h2>
-            <div class="Products">
-                <div class="product">
-                    <h3>Croissant</h3>
-                    <img src="https://images.unsplash.com/photo-1651604033534-e66b281f1981?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                        alt="image">
-                    <div class="overlay">
-                        <a href="find-an-influencer.html">view item</a>
-                    </div>
-                </div>
-                <div class="product">
-                    <h3>Donut</h3>
-                    <img src="https://images.unsplash.com/photo-1597419765826-5b03fa018c18?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                        alt="image">
-                    <div class="overlay">
-                        <a href="find-an-influencer.html">view item</a>
-                    </div>
-                </div>
-                <div class="product">
-                    <h3>Baguette</h3>
-                    <img src="https://images.unsplash.com/photo-1691862469586-9c7c183b27b7?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
-                    <div class="overlay">
-                        <a href="find-an-influencer.html">view item</a>
-                    </div>
-                </div>
+            <div class="Products" id="seasonal-list">
+                
             </div>
         </div>
         <div class="section3">
@@ -86,8 +144,8 @@
         <footer class="site-footer">
             <div class="footer-inner">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="font-family: 'Great Vibes', 'Brush Script MT', 'Segoe Script', cursive;">L’éléphante</a>
-                    <p>A cozy neighborhood bakery in Medford serving handmade donuts and fresh coffee, made from scratch every morning.</p>
+                    <a href="index.html" class="logo">l’éléphante</a>
+                    <p>Small-batch donuts, fried fresh every morning.</p>
                 </div>
                 <div class="footer-col">
                     <h2>Visit</h2>

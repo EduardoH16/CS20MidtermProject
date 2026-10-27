@@ -1,5 +1,5 @@
 /* 
-    Author:  
+    Author: Natalie Arai
     CS20 Midterm Project: l'elephante bakery
     card.js - builds the card for one menu item
 */
