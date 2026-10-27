@@ -29,7 +29,8 @@ function loadMenuItems(callback, boxId) {
             var menuItems = [];
             // turn each plain JSON entry into a Menu object
             entries.forEach((entry) => {
-                menuItems.push(new MenuItem(entry.name, entry.price, entry.description, entry.image, entry.category, entry.seasonal));
+                menuItems.push(new MenuItem(entry.name, entry.price, entry.description, 
+                                            entry.image, entry.category, entry.seasonal));
             });
             callback(menuItems);
         })
