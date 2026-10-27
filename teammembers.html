@@ -130,6 +130,12 @@
       "Eddy Hernandez": "Eddy is our cashier and customer service representative. He's usually the first person you'll see at the counter, and he's always happy to help you pick out the perfect donut."
     };
 
+    const teamImages = {
+      "Natalie Arai": "images/cs20midtermnat.jpg",
+      "Ishaan Srivastava": "images/cs20midtermish.jpg",
+      "Eddy Hernandez": "images/cs20midtermed.jpeg"
+    };
+
     const teamList = document.querySelector(".team-list");
 
     for (const name in teamMembers) {
@@ -137,7 +143,7 @@
       li.className = "team-member";
 
       const img = document.createElement("img");
-      img.src = "";
+      img.src = teamImages[name];
 
       const info = document.createElement("div");
       info.className = "team-member__info";
