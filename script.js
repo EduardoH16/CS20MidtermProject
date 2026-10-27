@@ -1,5 +1,5 @@
 /* 
-    Author: Natalie Arai
+    Author: Natalie Arai and Eddy Hernandex
     CS20 Midterm Project: l'elephante bakery
     script.js - a shared javascript file that is linked on every page as a fixed page element;
                 runs the hamburger menu andn puts the current year in the footer
