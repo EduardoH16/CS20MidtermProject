@@ -187,8 +187,7 @@ nav:not(.menu-panel) a:hover {
   font-size: 45px;
 }
 
-/* Top Influencers */
-
+/* menu products */
 .Products {
   display: grid;
   grid-template-columns: repeat(3, 400px);
@@ -383,11 +382,13 @@ footer:not(.site-footer) {
 
 @media (max-width: 1300px) {
   .Products {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    gap: 10;
     margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -462,14 +463,6 @@ footer:not(.site-footer) {
   }
 
   /* Products */
-  .Products {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-
   .product {
     width: 100%;
   }
